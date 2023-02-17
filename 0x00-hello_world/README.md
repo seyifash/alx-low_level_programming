@@ -6,3 +6,4 @@ this is a script that runs a C file through the preprocessor and save the result
 5- This is a program that prints a line using the printf function
 writing a program that prints the size of various type on the computer
 7- This is a script that generates the assembly code (Intel syntax) of a C code and save it in an output file
+8- This ia a programs that output some texts and the standard error
