@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - a program that prints the last digit stored in the variable
- * Return: Always 0 {success)
+ * main - A program that prints the last digit of a number
+ * Return: Always 0 (success)
  */
 
 int main(void)
@@ -22,11 +22,10 @@ int main(void)
 	}
 	else if (lastd == 0)
 	{
-	printf("last digit of %d is %d and is 0\n", n, lastd);
+	printf("last of %d is %d and is 0\n", n, lastd);
 	}
 	else if (lastd < 6 && lastd != 0)
-	{
-	printf("last digit of %d is %d and is less than 6 and not 0\n", n, lastd);
+	{printf("last digit of %d is %d and is less than 6 and not 0\n", n, lastd);
 	}
 	return (0);
 }
