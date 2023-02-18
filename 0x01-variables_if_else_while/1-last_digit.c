@@ -3,11 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - a program that prints the last digit stored inside avariable
- * prints if the last digit is greater than 5
- * prints if the lat digit of n is zero
- * prints if the last digit of n is less than six and not zero
- * Return: Alway 0 {success)
+ * main - a program that prints the last digit stored in the variable
+ * Return: Always 0 {success)
  */
 
 int main(void)
