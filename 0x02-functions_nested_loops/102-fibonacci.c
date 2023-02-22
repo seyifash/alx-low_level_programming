@@ -10,21 +10,22 @@
 int main(void)
 {
 	int i = 0;
-	long int a = 0, b = 1, next;
+	long a = 1, b = 2;
 
 	while (i < 50)
 	{
-	next = a + b;
-	a = b;
-	b = next;
-	printf("%lu", next);
-
-	if (i < 49)
+	if (i == 0)
+	printf("%ld", a);
+	else if (i == 1)
+	printf(", %ld", b);
+	else
 	{
-	printf(",");
+	b += a;
+	a = b - a;
+	printf(", %ld", b);
 	}
-	i++;
+	++i;
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
