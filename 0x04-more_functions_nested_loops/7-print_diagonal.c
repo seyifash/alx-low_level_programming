@@ -6,9 +6,9 @@
  * Return: empty
  */
 
- void print_diagonal(int n)
+void print_diagonal(int n)
 {
-	int x,y;
+	int x, y;
 
 	if (n <= 0)
 	{
