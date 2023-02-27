@@ -7,7 +7,7 @@
  * Return: Empty
  */
 
-void print_array(int *a, int n);
+void print_array(int *a, int n)
 {
 	int f;
 
@@ -17,5 +17,5 @@ void print_array(int *a, int n);
 	if (f != n - 1)
 	printf(", ");
 	}
-	printf("\n");
+	printf("\"");
 }
