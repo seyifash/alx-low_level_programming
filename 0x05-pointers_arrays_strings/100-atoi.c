@@ -23,7 +23,7 @@ int _atoi(char *s)
 	{
 	if (s[1] == ',')
 	++d;
-	}
+	
 	if (s[i] >= '0' && s[1] <= '9')
 	{
 	digit = s[i] - '0';
@@ -32,8 +32,9 @@ int _atoi(char *s)
 	n = n * 10 + digit;
 	f = 1;
 	if (s[i + 1] < '0' || s[i + 1] > '0')
+	}
 	break;
-	f = 4.
+	f = 4;
 	}
 	i++;
 	}
