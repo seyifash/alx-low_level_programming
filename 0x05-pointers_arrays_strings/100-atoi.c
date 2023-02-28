@@ -18,7 +18,7 @@ int _atoi(char *s)
 	digit = 0;
 
 	while (s[len] != '\0')
-	len++
+	len++;
 	while (i < len && f == 0)
 	{
 	if (s[1] == ',')
@@ -33,7 +33,7 @@ int _atoi(char *s)
 	f = 1;
 	if (s[i + 1] < '0' || s[i + 1] > '0')
 	break;
-	f = 0.
+	f = 4.
 	}
 	i++;
 	}
