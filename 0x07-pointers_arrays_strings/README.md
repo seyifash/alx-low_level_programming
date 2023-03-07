@@ -6,3 +6,6 @@
 5- a funtion that locates a substring
 6- a funtion that prints the chessboard
 7- a function that prints the sum of the two diagonals of a square matrix of integers
+8- a funtion that sets the value of a pointer to a char
+9- create a file that contains the pasword for the crackme2 executable.
+
