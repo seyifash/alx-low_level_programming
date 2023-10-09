@@ -11,26 +11,41 @@
 
 int binary_search(int *array, size_t size, int value)
 {
+	return (binary_search_recur(array, 0, size - 1, value));
+}
+
+/**
+ * binary_search_recur - helper function to serach for the index of the value
+ * @array: the array to be searched
+ * @left: the left side of the array
+ * @right: the right index of the array
+ * @value: the value to be searched for
+ * Return: returns the given index if found
+ */
+
+int binary_search_recur(int *array, size_t left, size_t right, int value)
+{
 	size_t mid;
-	size_t left = 0;
-	size_t right = size - 1;
 
 	if (!array)
 	return (-1);
 
-	while (left <= right)
-	{
-	mid = left + (right - left) / 2;
 	print_array(array, left, right);
+	mid = left + (right - left) / 2;
 
+	if (left == right)
+	{
+		if (array[mid] == value)
+		return ((int)mid);
+		else
+		return (-1);
+	}
 	if (value == array[mid])
 	return ((int)mid);
 	else if (value < array[mid])
-	right = mid - 1;
+	return (binary_search_recur(array, left, mid - 1, value));
 	else
-	left = mid + 1;
-	}
-	return (-1);
+	return (binary_search_recur(array, mid + 1, right, value));
 }
 
 /**
