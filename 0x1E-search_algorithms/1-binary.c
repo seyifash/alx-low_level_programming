@@ -18,10 +18,10 @@ int binary_search(int *array, size_t size, int value)
 	if (!array || size == 0)
 	return (-1);
 
-	while (left <= right)
+	while (right >= left)
 	{
-	mid = left + (right - left) / 2;
 	print_array(array, left, right);
+	mid = left + (right - left) / 2;
 
 	if (array[mid] < value)
 	left = mid + 1;
