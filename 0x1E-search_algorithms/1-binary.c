@@ -11,41 +11,26 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	return (binary_search_recur(array, 0, size - 1, value));
-}
-
-/**
- * binary_search_recur - helper function to serach for the index of the value
- * @array: the array to be searched
- * @left: the left side of the array
- * @right: the right index of the array
- * @value: the value to be searched for
- * Return: returns the given index if found
- */
-
-int binary_search_recur(int *array, size_t left, size_t right, int value)
-{
 	size_t mid;
+	size_t left = 0;
+	size_t right = size - 1;
 
 	if (!array)
 	return (-1);
 
-	print_array(array, left, right);
-	mid = left + (right - left) / 2;
-
-	if (left == right)
+	while (left <= right)
 	{
-		if (array[mid] == value)
-		return ((int)mid);
-		else
-		return (-1);
-	}
-	if (value == array[mid])
-	return ((int)mid);
-	else if (value < array[mid])
-	return (binary_search_recur(array, left, mid - 1, value));
+	mid = left + (right - left) / 2;
+	print_array(array, left, right);
+
+	if (array[mid] < value)
+	left = mid + 1;
+	else if(array[mid] > value)
+	right = mid - 1;
 	else
-	return (binary_search_recur(array, mid + 1, right, value));
+	return ((int)mid);
+	}
+	return (-1);
 }
 
 /**
@@ -64,11 +49,12 @@ void print_array(int *array, size_t left, size_t right)
 		printf("searching in array: ");
 		for (i = left; i <= right; i++)
 		{
-			if (i < right)
-			printf("%d, ", array[i]);
-			else
-			printf("%d\n", array[i]);
+		if (i < right)
+		printf("%d, ", array[i]);
+		else
+		printf("%d\n", array[i]);
 		}
 	}
+
 }
 
