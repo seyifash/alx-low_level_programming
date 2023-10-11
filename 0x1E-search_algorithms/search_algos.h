@@ -27,5 +27,6 @@ int binar_search(int *array, size_t left, size_t min, int value);
 int exponential_search(int *array, size_t size, int value);
 int advanced_binary(int *array, size_t size, int value);
 int advanced_binary_recur(int *array, size_t left, size_t right, int value);
-
+listint_t *get_to_next_step(listint_t *list, size_t jump);
+listint_t *jump_list(listint_t *list, size_t size, int value);
 #endif
