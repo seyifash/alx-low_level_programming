@@ -30,7 +30,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t b = sqrt(size);
 	size_t f;
 
-	if (!array || size == 0)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	printf("Value checked array[%lu] = [%d]\n", a, array[a]);
